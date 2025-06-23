@@ -49,11 +49,28 @@ Exercise 4
 
 Solve Exercise 4 here:
 */
-let myStarter = pokemon[24]
+//1.
+let myStarters = pokemon[24]
 
-console.log("Exercise 4.1 result", myStarter)
-
-game.myStarter = [myStarter]
+console.log("Exercise 4.1 result", myStarters)
+//2.
+game.party = [myStarters]
 
 console.log("Exercise 4.2 result", game)
 
+/*
+Exercise 5
+1. Choose three more Pokémon from the `pokemon` array and add them to your party.
+2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
+
+
+Solve Exercise 5 here:
+/* 5.1 Pokemon: 77, 131, 133, 150
+  5.2 Push()
+*/
+
+
+game.party.push(pokemon[77], pokemon[131], pokemon [133], pokemon[150]
+)
+
+console.log("Exercise 5 result", game.party)
