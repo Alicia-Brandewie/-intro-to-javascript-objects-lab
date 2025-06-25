@@ -257,3 +257,13 @@ game.gyms.forEach((gym) => {
     gym.completed = true
 }});
 console.log("Exercise 15 result ", game.gyms);
+
+/*
+Exercise 16
+1. Log the entire `game` object to the console. Take a moment to review the changes you've made throughout the exercises.
+
+
+Solve Exercise 16 here:
+*/
+
+console.log("Exercise 16", game)
