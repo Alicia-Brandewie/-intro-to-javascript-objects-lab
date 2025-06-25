@@ -74,3 +74,24 @@ game.party.push(pokemon[77], pokemon[131], pokemon [133], pokemon[150]
 )
 
 console.log("Exercise 5 result", game.party)
+/*
+Exercise 6
+1. Set the `completed` property to true for gyms with a difficulty below 3.
+2. Think about how you'd loop through the `gyms` array to check and update the `completed` property.
+
+
+Solve Exercise 6 here:
+*/
+for (let x = 1 ; x <=3; x++) {
+  game.gyms.difficulty;
+  [game.gyms.completed] = "true";
+  console.log(game.gyms);
+}
+
+
+/*
+if ([game.gym.difficulty <=3]) {
+    completed = true;
+    console.log(game.gym)
+}
+*/
