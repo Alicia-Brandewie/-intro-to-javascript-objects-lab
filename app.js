@@ -226,3 +226,34 @@ const gymStatus = game.gyms.forEach((gyms => {
 
   console.log("exercise 13 [stumped, should be {complete 5, incomplete 3}]: ", gymTally)
 
+/*
+Exercise 14
+1. Add a `partyCount` method to `game` that counts the number of Pokémon in your party.
+
+This method should:
+  - Not accept any arguments.
+  - Count the number of Pokemon in the party.
+  - return the found number of Pokemon in the party.
+
+Solve Exercise 14 here:
+*/
+/*
+const partyCount = {
+  let partyLength = game.party.length;
+  console.log("exercise 14", partyLength)
+}
+
+game.push(partyCount)
+*/
+/*
+Exercise 15
+1. Now, complete gyms with a difficulty below 8. Reflect on how this is similar to or different from the previous gym exercises.
+(change the value of `complete` in the qualifying objects from false to true).
+
+Solve Exercise 15 here:
+*/
+game.gyms.forEach((gym) => {
+  if (gym.difficulty <=8) {
+    gym.completed = true
+}});
+console.log("Exercise 15 result ", game.gyms);
