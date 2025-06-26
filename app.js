@@ -163,13 +163,14 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 
 Solve Exercise 11 here:
 */
-game.catchPokemon = function(pokemonObj) {
-  game.party.push(pokemonObj);
- // game.items["pokeball"].quantity -1;   
-};
-game.catchPokemon(pokemon[46]);
-console.log("Exercise 11[stumped]",game.items);
-//could not solve, got stuck on how to access pokeball quantity
+game.catchPokemon ((pokemonObj) => {
+  game.party.push(pokemonObj); {
+  game.items.quantity --};   
+});
+
+game.catchPokemon(pokemon[78]);
+console.log("Exercise 11 result",game.items);
+//decreasing math not happening & IDK why
 
 
 /*
@@ -216,15 +217,15 @@ const gymTally = {
   };
 
 //loop
-const gymStatus = game.gyms.forEach((gyms => {
-  if (gyms.completed === true) {
+const gymStatus = game.gyms.forEach((gym => {
+  if (gym.completed === true) {
     gymTally.complete ++;
-  } else (gyms.complete === false); {
+  } else  {
     gymTally.incomplete ++;
   }
 }));
 
-  console.log("exercise 13 [stumped, should be {complete 5, incomplete 3}]: ", gymTally)
+  console.log("exercise 13 ", gymTally)
 
 /*
 Exercise 14
@@ -237,14 +238,14 @@ This method should:
 
 Solve Exercise 14 here:
 */
-/*
-const partyCount = {
+
+const partyCount = () => {
   let partyLength = game.party.length;
   console.log("exercise 14", partyLength)
-}
+};
+//stumped
 
-game.push(partyCount)
-*/
+
 /*
 Exercise 15
 1. Now, complete gyms with a difficulty below 8. Reflect on how this is similar to or different from the previous gym exercises.
