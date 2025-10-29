@@ -37,7 +37,7 @@ Exercise 3
 Solve Exercise 3 here:
 */
 
-game.difficulty = ["Med"]
+game.difficulty = "Med";
 
 console.log(game.difficulty)
 
@@ -163,14 +163,17 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 
 Solve Exercise 11 here:
 */
-game.catchPokemon ((pokemonObj) => {
-  game.party.push(pokemonObj); {
-  game.items.quantity --};   
-});
+game.catchPokemon = function (pokemonObj) {
+  this.party.push(pokemonObj); {
+    for (let i = 0; i <this.items.length; i++) {
+      if (this.items[i].name === 'pokeball') {
+        this.items[i].quantity--;}
+    }
+  };   
+};
 
-game.catchPokemon(pokemon[78]);
+game.catchPokemon(pokemon[77]);
 console.log("Exercise 11 result",game.items);
-//decreasing math not happening & IDK why
 
 
 /*
@@ -211,21 +214,27 @@ Solve Exercise 13 here:
 */
 
 
-const gymTally = {
-    complete: 0,
-    incomplete: 0,
-  };
+
 
 //loop
-const gymStatus = game.gyms.forEach((gym => {
-  if (gym.completed === true) {
-    gymTally.complete ++;
-  } else  {
-    gymTally.incomplete ++;
-  }
-}));
 
-  console.log("exercise 13 ", gymTally)
+game.gymStatus = function() { 
+  const gymTally = {
+    completed: 0,
+    incomplete: 0,
+  };
+  for (let i = 0; i< game.gyms.length; i++) {
+    if (game.gyms[i].completed === true) {
+      gymTally.completed++;
+    }
+    else {
+      gymTally.incomplete++
+    }
+  }
+console.log("exercise 13 ", gymTally)
+};
+
+game.gymStatus();
 
 /*
 Exercise 14
@@ -239,12 +248,11 @@ This method should:
 Solve Exercise 14 here:
 */
 
-const partyCount = () => {
-  let partyLength = game.party.length;
-  console.log("exercise 14", partyLength)
-};
-//stumped
 
+game.partyCount = function() {
+  return this.party.length;  
+};
+ console.log("exercise 14", game.partyCount())
 
 /*
 Exercise 15
